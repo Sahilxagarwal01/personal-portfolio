@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Agarwal | Portfolio</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Sahil<span>.dev</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <p class="greeting">Hello, I'm</p>
+            <h1>Sahil Agarwal</h1>
+            <div class="typing-container">
+                <span class="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-desc">A passionate B.Tech student ready to build real-world web solutions.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-card">
+                <div class="about-icon">🎓</div>
+                <h3>Education</h3>
+                <p>B.Tech 2nd Year student at JECRC Foundation with strong foundation in web development and Java.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">💻</div>
+                <h3>Experience</h3>
+                <p>Currently interning at Internova Labs, building real-world web projects using HTML and CSS.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">🎯</div>
+                <h3>Goal</h3>
+                <p>Looking to grow as a Full Stack Developer and contribute to meaningful projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span>HTML5</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span>CSS3</span>
+                    <span>80%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span>Java</span>
+                    <span>75%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span>Git & GitHub</span>
+                    <span>70%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <h2>Experience & Education</h2>
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2026</span>
+                    <h3>Web Development Intern</h3>
+                    <p>Internova Labs — Building real world web projects using HTML and CSS.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2024 - Present</span>
+                    <h3>B.Tech — 2nd Year</h3>
+                    <p>JECRC Foundation — Currently pursuing Bachelor of Technology.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2024</span>
+                    <h3>Completed 12th Grade</h3>
+                    <p>Completed higher secondary education and secured admission in B.Tech.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-top">
+                    <span class="project-tag">HTML & CSS</span>
+                </div>
+                <h3>Student Management System</h3>
+                <p>A frontend system for managing student records, tracking data and administrative control panels.</p>
+                <a href="#" class="project-link">View Project →</a>
+            </div>
+            <div class="project-card">
+                <div class="project-top">
+                    <span class="project-tag">HTML & CSS</span>
+                </div>
+                <h3>Project Hub Dashboard</h3>
+                <p>A responsive dashboard layout showcasing project components built with HTML and CSS.</p>
+                <a href="#" class="project-link">View Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <p>Have a question or want to work together? Drop a message!</p>
+        <form class="contact-form" onsubmit="event.preventDefault();">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed & Built by <span>Sahil Agarwal</span> &copy; 2026</p>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const btn = document.querySelector('.theme-toggle');
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.setAttribute('data-theme', 'light');
+                btn.textContent = '☀️';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                btn.textContent = '🌙';
+            }
+        }
+
+        // Typing Animation
+        const texts = ['Web Developer', 'Java Programmer', 'Frontend Designer', 'B.Tech Student'];
+        let index = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingEl = document.querySelector('.typing-text');
+
+        function type() {
+            const current = texts[index];
+            if (isDeleting) {
+                typingEl.textContent = current.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingEl.textContent = current.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            if (!isDeleting && charIndex === current.length) {
+                isDeleting = true;
+                setTimeout(type, 1500);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % texts.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 60 : 100);
+            }
+        }
+        type();
+
+        // Scroll Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.about-card, .skill-item, .timeline-item, .project-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
