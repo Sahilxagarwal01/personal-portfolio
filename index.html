@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahil Agarwal | Portfolio</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <header class="navbar">
+    <header class="navbar" id="navbar">
         <div class="logo">Sahil<span>.dev</span></div>
         <nav>
             <ul class="nav-links">
@@ -22,54 +23,85 @@
             </ul>
         </nav>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" onclick="toggleMenu()">Home</a>
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#skills" onclick="toggleMenu()">Skills</a>
+        <a href="#timeline" onclick="toggleMenu()">Timeline</a>
+        <a href="#projects" onclick="toggleMenu()">Projects</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
 
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
+        <div class="hero-bg"></div>
         <div class="hero-content">
-            <p class="greeting">Hello, I'm</p>
-            <h1>Sahil Agarwal</h1>
+            <p class="greeting">👋 Hello, I'm</p>
+            <h1 class="hero-name">Sahil Agarwal</h1>
             <div class="typing-container">
                 <span class="typing-text"></span>
                 <span class="cursor">|</span>
             </div>
-            <p class="hero-desc">A passionate B.Tech student ready to build real-world web solutions.</p>
+            <p class="hero-desc">A passionate B.Tech student from JECRC Foundation, Jaipur. I love building clean, responsive and modern web experiences.</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn">View My Work</a>
                 <a href="#contact" class="btn btn-outline">Contact Me</a>
             </div>
+            <div class="hero-socials">
+                <a href="https://github.com/Sahilxagarwal01" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:sahilagrawal980@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-avatar">SA</div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <h2>About Me</h2>
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Get to know me better</p>
+        </div>
         <div class="about-container">
             <div class="about-card">
                 <div class="about-icon">🎓</div>
                 <h3>Education</h3>
-                <p>B.Tech 2nd Year student at JECRC Foundation with strong foundation in web development and Java.</p>
+                <p>B.Tech 2nd Year at JECRC Foundation, Jaipur. Strong foundation in Computer Science and Web Development.</p>
             </div>
             <div class="about-card">
                 <div class="about-icon">💻</div>
-                <h3>Experience</h3>
-                <p>Currently interning at Internova Labs, building real-world web projects using HTML and CSS.</p>
+                <h3>Internship</h3>
+                <p>Web Development Intern at Internova Labs (Batch 1, 2026). Building real-world projects using HTML, CSS and JavaScript.</p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">☕</div>
+                <h3>Java</h3>
+                <p>Strong knowledge of Java programming with object-oriented concepts, logic building and problem solving skills.</p>
             </div>
             <div class="about-card">
                 <div class="about-icon">🎯</div>
                 <h3>Goal</h3>
-                <p>Looking to grow as a Full Stack Developer and contribute to meaningful projects.</p>
+                <p>Aspiring Full Stack Developer looking to build impactful web applications and grow as a software engineer.</p>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
-        <h2>My Skills</h2>
+        <div class="section-title">
+            <h2>My Skills</h2>
+            <p>Technologies I work with</p>
+        </div>
         <div class="skills-container">
             <div class="skill-item">
                 <div class="skill-info">
-                    <span>HTML5</span>
+                    <span><i class="fab fa-html5"></i> HTML5</span>
                     <span>85%</span>
                 </div>
                 <div class="progress-bar">
@@ -78,7 +110,7 @@
             </div>
             <div class="skill-item">
                 <div class="skill-info">
-                    <span>CSS3</span>
+                    <span><i class="fab fa-css3-alt"></i> CSS3</span>
                     <span>80%</span>
                 </div>
                 <div class="progress-bar">
@@ -87,7 +119,7 @@
             </div>
             <div class="skill-item">
                 <div class="skill-info">
-                    <span>Java</span>
+                    <span><i class="fab fa-java"></i> Java</span>
                     <span>75%</span>
                 </div>
                 <div class="progress-bar">
@@ -96,11 +128,20 @@
             </div>
             <div class="skill-item">
                 <div class="skill-info">
-                    <span>Git & GitHub</span>
+                    <span><i class="fab fa-github"></i> Git & GitHub</span>
                     <span>70%</span>
                 </div>
                 <div class="progress-bar">
                     <div class="progress" style="width: 70%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span>🌐 Responsive Design</span>
+                    <span>80%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
                 </div>
             </div>
         </div>
@@ -108,80 +149,156 @@
 
     <!-- Timeline Section -->
     <section id="timeline" class="timeline-section">
-        <h2>Experience & Education</h2>
+        <div class="section-title">
+            <h2>My Journey</h2>
+            <p>Education & Experience</p>
+        </div>
         <div class="timeline">
-
-            <div class="timeline-item">
+            <div class="timeline-item left">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-year">2026</span>
                     <h3>Web Development Intern</h3>
-                    <p>Internova Labs — Building real world web projects using HTML and CSS.</p>
+                    <p>Internova Labs — Batch 1, 2026. Building real-world web projects using HTML, CSS and JavaScript.</p>
                 </div>
             </div>
-
-            <div class="timeline-item">
+            <div class="timeline-item right">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-year">2024 - Present</span>
                     <h3>B.Tech — 2nd Year</h3>
-                    <p>JECRC Foundation — Currently pursuing Bachelor of Technology.</p>
+                    <p>JECRC Foundation, Jaipur. Currently pursuing Bachelor of Technology in Computer Science.</p>
                 </div>
             </div>
-
-            <div class="timeline-item">
+            <div class="timeline-item left">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-year">2024</span>
                     <h3>Completed 12th Grade</h3>
-                    <p>Completed higher secondary education and secured admission in B.Tech.</p>
+                    <p>Completed higher secondary education and secured admission in B.Tech at JECRC Foundation.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
+        <div class="section-title">
+            <h2>My Projects</h2>
+            <p>Things I have built</p>
+        </div>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-top">
-                    <span class="project-tag">HTML & CSS</span>
+                <div class="project-card-top">
+                    <div class="project-icon">🎓</div>
+                    <span class="project-tag">HTML & CSS & JS</span>
                 </div>
                 <h3>Student Management System</h3>
-                <p>A frontend system for managing student records, tracking data and administrative control panels.</p>
-                <a href="#" class="project-link">View Project →</a>
+                <p>A full featured admin dashboard for managing student records, attendance tracking, marks, grades, fee status with dark/light mode.</p>
+                <div class="project-techs">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>LocalStorage</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Sahilxagarwal01/student-management-system" target="_blank" class="project-btn"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" target="_blank" class="project-btn project-btn-live">🚀 Live Demo</a>
+                </div>
             </div>
             <div class="project-card">
-                <div class="project-top">
-                    <span class="project-tag">HTML & CSS</span>
+                <div class="project-card-top">
+                    <div class="project-icon">💼</div>
+                    <span class="project-tag">HTML & CSS & JS</span>
                 </div>
-                <h3>Project Hub Dashboard</h3>
-                <p>A responsive dashboard layout showcasing project components built with HTML and CSS.</p>
-                <a href="#" class="project-link">View Project →</a>
+                <h3>Personal Portfolio Website</h3>
+                <p>A modern responsive portfolio website with dark/light mode, typing animation, scroll animations, skills progress bars and timeline.</p>
+                <div class="project-techs">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Sahilxagarwal01/personal-portfolio" target="_blank" class="project-btn"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" target="_blank" class="project-btn project-btn-live">🚀 Live Demo</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <h2>Get In Touch</h2>
-        <p>Have a question or want to work together? Drop a message!</p>
-        <form class="contact-form" onsubmit="event.preventDefault();">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Let's work together</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>sahilagrawal980@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Sahilxagarwal01</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Jaipur, Rajasthan, India</p>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message 📨</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>Designed & Built by <span>Sahil Agarwal</span> &copy; 2026</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Designed & Built by <span>Sahil Agarwal</span></p>
+            <p class="footer-sub">B.Tech Student | Web Developer | JECRC Foundation</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Sahilxagarwal01" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:sahilagrawal980@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Sahil Agarwal. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
+        }
+
         // Theme Toggle
         function toggleTheme() {
             const html = document.documentElement;
@@ -196,7 +313,7 @@
         }
 
         // Typing Animation
-        const texts = ['Web Developer', 'Java Programmer', 'Frontend Designer', 'B.Tech Student'];
+        const texts = ['Web Developer', 'Java Programmer', 'B.Tech Student', 'Frontend Designer'];
         let index = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -233,9 +350,16 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.about-card, .skill-item, .timeline-item, .project-card').forEach(el => {
+        document.querySelectorAll('.about-card, .skill-item, .timeline-item, .project-card, .contact-card').forEach(el => {
             observer.observe(el);
         });
+
+        // Contact Form
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('✅ Message sent! I will get back to you soon.');
+            e.target.reset();
+        }
     </script>
 
 </body>
